@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameHub — Jogos e informações</title>
+<meta name="description" content="Catálogo de jogos com resumo, tamanho, requisitos mínimos e links para lojas oficiais.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#"><span>GAME</span>HUB</a>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#jogos">Jogos</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <p class="eyebrow">CATÁLOGO GAMER</p>
+    <h1>Encontre seu próximo jogo.</h1>
+    <p>Resumos rápidos, tamanho, requisitos mínimos e acesso direto às lojas oficiais.</p>
+    <a class="primary-btn" href="#jogos">Explorar jogos</a>
+  </div>
+</section>
+
+<section class="catalog" id="jogos">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">CATÁLOGO</p>
+      <h2>Jogos em destaque</h2>
+    </div>
+    <input id="search" type="search" placeholder="Pesquisar jogo..." aria-label="Pesquisar jogo">
+  </div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>Nenhum jogo encontrado.</p>
+</section>
+
+<section class="about" id="sobre">
+  <p class="eyebrow">SOBRE</p>
+  <h2>Informação simples para gamers.</h2>
+  <p>O GameHub reúne informações essenciais dos jogos e direciona você para a página oficial de cada título. Os links de compra ou download são fornecidos pelas respectivas lojas.</p>
+</section>
+</main>
+
+<footer>© 2026 GameHub · Informações e links para lojas oficiais</footer>
+
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button id="close" class="close" aria-label="Fechar">×</button>
+    <img id="modalImg" alt="">
+    <div class="modal-body">
+      <p id="modalGenre" class="eyebrow"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalSummary"></p>
+      <div class="facts">
+        <div><span>Lançamento</span><b id="modalRelease"></b></div>
+        <div><span>Tamanho</span><b id="modalSize"></b></div>
+        <div><span>Plataforma</span><b id="modalPlatform"></b></div>
+      </div>
+      <h3>Requisitos mínimos</h3>
+      <p id="modalReq"></p>
+      <a id="modalLink" class="primary-btn" target="_blank" rel="noopener noreferrer">Ir para loja oficial ↗</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
