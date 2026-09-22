@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minatohokague61-jpg.github.io/Game-Hub/sitemap.xml
